@@ -12,6 +12,8 @@ public class ConfigParser {
 	public static int multiplierClockCycle = 0;
 	public static int dividerCockCycle = 0;
 	public static int memoryClockCycle = 0;
+	public static int iCacheClockCycle = 0;
+	public static int dCacheClockCycle = 0;
 	
 	//variables to store whether the functional units are pipelined
 	public static boolean isAdderPipelined = false;
@@ -82,7 +84,16 @@ public class ConfigParser {
 				i++;
 				memoryClockCycle = Integer.parseInt(s[i].trim());
 				break;
+			
+			case "I-CACHE":
+				i++;
+				iCacheClockCycle = Integer.parseInt(s[i].trim());
+				break;
 
+			case "D-CACHE":
+				i++;
+				dCacheClockCycle = Integer.parseInt(s[i].trim());
+				break;
 			
 			default:
 				break;
