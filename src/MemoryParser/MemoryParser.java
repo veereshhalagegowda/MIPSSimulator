@@ -40,7 +40,6 @@ public class MemoryParser {
 			scanner = new Scanner(getClass().getResourceAsStream(fileName));
 			while (scanner.hasNext()) {
 				line = scanner.nextLine();
-				
 					convertBinaryToDecimal(line, isDataFile);
 				}
 
